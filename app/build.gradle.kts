@@ -1,3 +1,4 @@
+// Библиотеки из данного файла сбоки будут использоваться ТОЛЬКО в модуле app
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -11,7 +12,9 @@ android {
 
     defaultConfig {
         applicationId = "com.example.lesson_androidintroduction_1"
+        // Минимальная версия Андройда, для которой будет достуно приложение
         minSdk = 23
+        // Рекомендуемая версия Андройда
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -37,6 +40,7 @@ android {
     }
 }
 
+// Раздел зависимостей — предназначен для добавления сторонних библиотек
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
